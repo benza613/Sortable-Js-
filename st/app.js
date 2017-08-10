@@ -36,12 +36,10 @@
 
     Sortable.create(list1, {
         animation: 100,
-        group: 1
     });
 
     Sortable.create(list2, {
         animation: 100,
-        group: 2
     });
 
     Sortable.create(list3, {
