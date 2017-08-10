@@ -28,8 +28,6 @@ ul {
 .container {
 	width: 80%;
 	margin: auto;
-	min-width: 1100px;
-	max-width: 1300px;
 	position: relative;
 }
 
@@ -48,15 +46,12 @@ ul {
 
 .block__list {
 	padding: 20px 0;
-	max-width: 360px;
-	margin-top: -8px;
-	margin-left: 5px;
 	background-color: #fff;
 }
 
-.block__list li {
-	cursor: move;
-}
+	.block__list li {
+		cursor: move;
+	}
 
 .block__list_words li {
 	/*the parent li get padded*/
@@ -80,7 +75,7 @@ ul {
 
 	#editable li {
 		background-color: #ffd56f;
-		border-bottom:thin solid #083765;
+		border-bottom: thin solid #083765;
 		position: relative;
 	}
 
@@ -96,31 +91,49 @@ ul {
 		cursor: pointer;
 		color: #c00;
 		top: 10px;
-		float:right;
-		padding-right:15px;
+		float: right;
+		padding-right: 15px;
 		font-style: normal;
 	}
 
 	#editable li:hover i {
 		opacity: 1;
-		
 	}
 
-	#editable li ul li{
-		background-color:white;
+	#editable li ul {
+		list-style-type: none;
+		min-height: 40px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
 	}
 
-		#editable li:hover ul li:hover {
-			background-color: #5F9EDF;
+		#editable li ul li {
+			background-color: white;
+			float: left;
+			padding: 10px;
+			margin: 5px 5px 5px 5px;
+			padding: 3px;
+			font-size: 0.75em;
+			width: 200px;
+			text-align: center;
+			font-weight: bold;
+			border: 1px solid black;
 		}
+
+	#editable li:hover ul li:hover {
+		background-color: #5F9EDF;
+	}
 
 
 #filter {
 }
 
+
+
 	#filter button {
 		color: #fff;
-		width: 100%;
+		width: 24.5%;
 		border: none;
 		outline: 0;
 		opacity: .5;
@@ -139,6 +152,7 @@ ul {
 	#filter .block__list {
 		padding-bottom: 0;
 	}
+
 
 li ul li {
 }

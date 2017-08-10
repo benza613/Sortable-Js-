@@ -1,4 +1,6 @@
 ﻿var editableList;
+var _pDir;
+var _p;
 (function () {
 
     var byId = function (id) { return document.getElementById(id); }
@@ -12,9 +14,9 @@
             evt.item.parentNode.removeChild(evt.item);
         },
         onSort: function (evt) {
-            $.each(editableList.el.children, function (i, val) {
-                console.log(editableList.el.children[i].id);
-            });
+            //$.each(editableList.el.children, function (i, val) {
+            //    console.log(editableList.el.children[i].id);
+            //});
         },
     });
 
@@ -34,17 +36,17 @@
         });
     };
 
-    Sortable.create(list1, {
-        animation: 100,
-    });
+    _pDir = ["list1", "list2", "list3"];
+    _p=[];
 
-    Sortable.create(list2, {
-        animation: 100,
-    });
+    for (var i = 0; i < _pDir.length; i++) {
+        console.log(i + " __ " + _pDir[i]);
+        _p.push(Sortable.create(byId(_pDir[i]), {
+            animation: 100,
+            group: { name: _pDir[i] }
+        }));
+    }
 
-    Sortable.create(list3, {
-        animation: 100
-    });
 
 
 
@@ -53,7 +55,6 @@
 
 $('#editable > li .js-edit').click(function () {
 
-    console.log($(this).parent().find('ul').html());
 
     $(this).parent().find('ul').toggle(300);
     if ($(this).hasClass("glyphicon-triangle-bottom")) {
@@ -79,6 +80,12 @@ $('#toggleAllOff').on('click', function () {
 
 $('#btnSubmit').on('click', function () {
     console.clear();
+
+    console.log(editableList.toArray());
+    console.log(_p[0].toArray());
+    console.log(_p[1].toArray());
+    console.log(_p[2].toArray());
+
 
     $('#editable  li').each(function (i, val) {
         console.log($(this)[0].id);
