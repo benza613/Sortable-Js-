@@ -55,15 +55,18 @@
 
 $('#editable > li .js-edit').click(function () {
 
+    console.log($(this).parent().find('ul').html());
+
+    $(this).parent().find('ul').toggle(300);
     if ($(this).hasClass("glyphicon-triangle-bottom")) {
-        alert('hi');
         $(this).removeClass("glyphicon-triangle-bottom");
         $(this).addClass("glyphicon-triangle-top");
     } else {
         $(this).removeClass("glyphicon-triangle-top");
         $(this).addClass("glyphicon-triangle-bottom");
     }
-    $(this).parent().find('ul').toggle(300);
+
+    
 
 
 });

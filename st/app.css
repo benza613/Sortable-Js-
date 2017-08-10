@@ -187,6 +187,10 @@ img {
 		position: relative;
 	}
 
+		#editable li:hover {
+			background-color: #e5bf63;
+		}
+
 	#editable i {
 		-webkit-transition: opacity .2s;
 		transition: opacity .2s;
@@ -196,16 +200,22 @@ img {
 		color: #c00;
 		top: 10px;
 		float:right;
+		padding-right:15px;
 		font-style: normal;
 	}
 
 	#editable li:hover i {
 		opacity: 1;
+		
 	}
 
-	#editable li:hover ul li{
+	#editable li ul li{
 		background-color:white;
 	}
+
+		#editable li:hover ul li:hover {
+			background-color: #5F9EDF;
+		}
 
 
 #filter {
@@ -256,5 +266,4 @@ img {
 }
 
 li ul li {
-	display:none;
 }
