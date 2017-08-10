@@ -56,6 +56,7 @@
 $('#editable > li .js-edit').click(function () {
 
     if ($(this).hasClass("glyphicon-triangle-bottom")) {
+        alert('hi');
         $(this).removeClass("glyphicon-triangle-bottom");
         $(this).addClass("glyphicon-triangle-top");
     } else {
