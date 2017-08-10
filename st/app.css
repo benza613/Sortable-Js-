@@ -45,80 +45,6 @@ ul {
 	opacity: .2;
 }
 
-#foo .sortable-drag {
-	background: #daf4ff;
-}
-
-
-img {
-	border: 0;
-	vertical-align: middle;
-}
-
-
-.logo {
-	top: 55px;
-	left: 30px;
-	position: absolute;
-}
-
-.title {
-	color: #fff;
-	padding: 3px 10px;
-	display: inline-block;
-	position: relative;
-	background-color: #FF7373;
-	z-index: 1000;
-}
-
-.title_xl {
-	padding: 3px 15px;
-	font-size: 40px;
-}
-
-
-
-.tile {
-	width: 22%;
-	min-width: 245px;
-	color: #FF7270;
-	padding: 10px 30px;
-	text-align: center;
-	margin-top: 15px;
-	margin-left: 5px;
-	margin-right: 30px;
-	background-color: #fff;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.tile__name {
-	cursor: move;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #FF7373;
-}
-
-.tile__list {
-	margin-top: 10px;
-}
-
-	.tile__list:last-child {
-		margin-right: 0;
-		min-height: 80px;
-	}
-
-	.tile__list img {
-		cursor: move;
-		margin: 10px;
-		border-radius: 100%;
-	}
-
-
-
-.block {
-	opacity: 1;
-	position: absolute;
-}
 
 .block__list {
 	padding: 20px 0;
@@ -128,19 +54,12 @@ img {
 	background-color: #fff;
 }
 
-.block__list-title {
-	margin: -20px 0 0;
-	padding: 10px;
-	text-align: center;
-	background: #5F9EDF;
-}
-
 .block__list li {
 	cursor: move;
 }
 
 .block__list_words li {
-	background-color: #fff;
+	/*the parent li get padded*/
 	padding: 10px 40px;
 }
 
@@ -149,9 +68,9 @@ img {
 	background-color: #F4E2C9;
 }
 
-.block__list_words li:first-letter {
+/*.block__list_words li:first-letter {
 	text-transform: uppercase;
-}
+}*/
 
 .block__list_tags {
 	padding-left: 30px;
@@ -184,6 +103,7 @@ img {
 
 	#editable li {
 		background-color: #ffd56f;
+		border-bottom:thin solid #083765;
 		position: relative;
 	}
 
