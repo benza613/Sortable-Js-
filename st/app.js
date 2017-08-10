@@ -1,5 +1,4 @@
 ﻿var editableList;
-var globalCount = 3;
 (function () {
 
     var byId = function (id) { return document.getElementById(id); }
