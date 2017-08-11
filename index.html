@@ -24,21 +24,22 @@
 
 			<div style="margin-top: -8px; margin-left: 10px" class="block__list block__list_words">
 				<ul id="editable">
-					<li id="parent1">
-						Cargo Readiness<i class="js-remove glyphicon glyphicon-remove"></i><i class="js-edit glyphicon glyphicon-triangle-bottom"></i><ul id="list1">
+					<li id="parent1" data-ben="1123">
+						<a>Cargo Readiness</a>
+						<i class="js-remove glyphicon glyphicon-remove"></i><i class="js-edit glyphicon glyphicon-triangle-bottom"></i><ul id="list1">
 							<li id="child12">Where is Cargo</li>
 							<li id="child13">State of Completion</li>
 						</ul>
 					</li>
-					<li id="parent2">
-						DO Issue
+					<li id="parent2" data-ben="1111">
+						<a>DO Issue</a>
 						<i class="js-remove glyphicon glyphicon-remove"></i><i class="js-edit glyphicon glyphicon-triangle-bottom"></i><ul id="list2">
 							<li id="child21">date of Issue</li>
 							<li id="child22">Success or Not</li>
 						</ul>
 					</li>
-					<li id="parent3">
-						IGM DETAILS
+					<li id="parent3" data-ben="1132">
+						<a>IGM DETAILS</a>
 						<i class="js-remove glyphicon glyphicon-remove"></i><i class="js-edit glyphicon glyphicon-triangle-bottom"></i><ul id="list3">
 							<li id="child32">Date of IGM</li>
 							<li id="child31">Filling Detail Number</li>
@@ -68,9 +69,9 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-
+			initDDL();
 			//$('#editable > li').find('ul').hide(300);
-			
+
 
 		});
 	</script>

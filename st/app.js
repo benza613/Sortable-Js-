@@ -1,7 +1,7 @@
 ﻿var editableList;
 var _pDir;
 var _p;
-(function () {
+function initDDL() {
 
     var byId = function (id) { return document.getElementById(id); }
 
@@ -14,9 +14,10 @@ var _p;
             evt.item.parentNode.removeChild(evt.item);
         },
         onSort: function (evt) {
-            //$.each(editableList.el.children, function (i, val) {
-            //    console.log(editableList.el.children[i].id);
-            //});
+            $.each(editableList.el.children, function (i, val) {
+                //console.log(editableList.el.children[i].id);
+                console.log($(this).attr("data-ben"));
+            });
         },
     });
 
@@ -27,7 +28,7 @@ var _p;
             form: {
                 name: 'Add Short Name',
                 dname: 'Add Long Name',
-            }
+				}
         }).done(function (ui) {
             var el = document.createElement('li');
             el.setAttribute("id", "parent-1");
@@ -50,7 +51,7 @@ var _p;
 
 
 
-})();
+};
 
 
 $('#editable > li .js-edit').click(function () {
@@ -76,6 +77,8 @@ $('#toggleAll').on('click', function () {
 
 $('#toggleAllOff').on('click', function () {
     $('#editable > li').find('ul').hide(300);
+
+
 });
 
 $('#btnSubmit').on('click', function () {
