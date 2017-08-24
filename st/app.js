@@ -48,14 +48,10 @@ function initDDL() {
         }));
     }
 
-
-
-
 };
 
 
 $('#editable > li .js-edit').click(function () {
-
 
     $(this).parent().find('ul').toggle(300);
     if ($(this).hasClass("glyphicon-triangle-bottom")) {
@@ -65,9 +61,6 @@ $('#editable > li .js-edit').click(function () {
         $(this).removeClass("glyphicon-triangle-top");
         $(this).addClass("glyphicon-triangle-bottom");
     }
-
-    
-
 
 });
 
